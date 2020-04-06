@@ -7,7 +7,7 @@ function component() {
   const a = 2;
   const b = 3;
 
-  element.innerHTML = `${a} + ${b} = ` + String(sum(2, 3));
+  element.innerHTML = `${a} + ${b} = ${String(sum(2, 3))}`;
 
   return element;
 }
