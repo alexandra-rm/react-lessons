@@ -7,12 +7,12 @@
     "build": "webpack --config webpack.config.js",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "prettier": "prettier --write src/**/*.ts*",
-    "test": "npx jest"
+    "test": "npx jest",
+    "precommit": "npm test && npm run lint && npm run prettier"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run lint && npm run prettier",
-      "pre-push": "npm test && npm run lint && npm run prettier"
+      "precommit": "npm test && npm run lint && npm run prettier"
     }
   },
   "repository": {

@@ -1,9 +1,9 @@
-import { sum } from "./sum";
+import { sum } from './sum';
 
-document.body.textContent = "Заиспользуем функцию сложения с урока!";
+document.body.textContent = 'Заиспользуем функцию сложения с урока!';
 
 function component() {
-  const element = document.createElement("div");
+  const element = document.createElement('div');
   const a = 2;
   const b = 3;
 
