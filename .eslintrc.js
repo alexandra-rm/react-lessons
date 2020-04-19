@@ -5,8 +5,13 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended",
+        "plugin:react/recommended"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -25,6 +30,8 @@ module.exports = {
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["warn", "single"]
+        "quotes": ["error", "single"],
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "react/prop-types": 0
     }
 };
