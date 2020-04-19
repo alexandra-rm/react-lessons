@@ -25,6 +25,6 @@ module.exports = {
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["warn", "double"]
+        "quotes": ["warn", "single"]
     }
 };

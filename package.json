@@ -9,7 +9,9 @@
     "precommit": "npm test && npm run lint && npm run prettier",
     "prettier": "prettier --write src/**/*.ts*",
     "start": "npx webpack-dev-server --mode development --open --hot",
-    "test": "npx jest"
+    "test": "npx jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -36,6 +38,10 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "@types/jest": "^25.2.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
