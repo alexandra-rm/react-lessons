@@ -6,9 +6,10 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
+    "precommit": "npm test && npm run lint && npm run prettier",
     "prettier": "prettier --write src/**/*.ts*",
-    "test": "npx jest",
-    "precommit": "npm test && npm run lint && npm run prettier"
+    "start": "npx webpack-dev-server --mode development --open --hot",
+    "test": "npx jest"
   },
   "husky": {
     "hooks": {
@@ -36,6 +37,8 @@
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "@types/jest": "^25.2.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "babel-jest": "^25.2.6",
@@ -60,5 +63,9 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

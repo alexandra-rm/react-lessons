@@ -1,15 +1,4 @@
-import { sum } from './sum';
+import React from "react";
+import { render } from "react-dom";
 
-document.body.textContent = 'Заиспользуем функцию сложения с урока!';
-
-function component() {
-  const element = document.createElement('div');
-  const a = 2;
-  const b = 3;
-
-  element.innerHTML = `${a} + ${b} = ${String(sum(2, 3))}`;
-
-  return element;
-}
-
-document.body.appendChild(component());
+render(<h1>React here!</h1>, document.getElementById("root"));

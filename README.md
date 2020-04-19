@@ -15,3 +15,9 @@
 * Консольный калькулятор, jest
 [Pull request](https://github.com/alexandra-rm/react-js-tutorial/pull/1)
 
+## lesson 3: Установка и настройка React
+- добавить конфигурации для JSX/TSX через babel используем preset-react
+- развернуть storybook https://storybook.js.org/
+- написать свой первый простой компонент "Hello World, ${username}", добавив к нему Storybook + Jest тест
+- настроить jest
+- настроить loki
