@@ -10,3 +10,8 @@
 * установить и настроить typescript через babel preset
 * установить и настроить jest
 * установить и настроить eslint + prettier
+
+## lesson 2: Typescript
+* Консольный калькулятор, jest
+[Pull request](https://github.com/alexandra-rm/react-js-tutorial/pull/1)
+
