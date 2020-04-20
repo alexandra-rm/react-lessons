@@ -2,7 +2,8 @@ module.exports = {
     verbose: true,
     clearMocks: true,
     coverageDirectory: "coverage",
-    testEnvironment: "node",
+    testEnvironment: "jsdom",
+    setupFilesAfterEnv: ["<rootDir>/internals/jestSettings.js"],
     transform: {
         "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
     },
