@@ -34,5 +34,16 @@ module.exports = {
         "quotes": ["error", "single"],
         "@typescript-eslint/explicit-function-return-type": 0,
         "react/prop-types": 0
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.test.ts",
+                "**/*.test.tsx"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 };
