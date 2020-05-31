@@ -1,10 +1,13 @@
 import React from 'react';
 
-interface Prop {
+interface ClickCounterButtonFromLessonProps {
   increment: () => void;
   children?: number;
 }
 
-export const ClickCounterButtonFromLesson = ({ increment, children = 0 }: Prop) => (
+export const ClickCounterButtonFromLesson: React.FC<ClickCounterButtonFromLessonProps> = ({
+  increment,
+  children = 0,
+}: ClickCounterButtonFromLessonProps) => (
   <button onClick={increment}>Clicked {children} times!</button>
 );

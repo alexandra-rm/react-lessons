@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 
 import { ClickCounterButtonFromLesson } from './ClickCounterButtonFromLesson';
 
-interface Prop {
+interface ClickCounterFromLessonProps {
   start?: number;
 }
 
-interface State {
+interface ClickCounterFromLessonState {
   count: number;
 }
 
-export class ClickCounterFromLesson extends Component<Prop, State> {
-  constructor(props: Prop) {
+export class ClickCounterFromLesson extends Component<
+  ClickCounterFromLessonProps,
+  ClickCounterFromLessonState
+> {
+  constructor(props: ClickCounterFromLessonProps) {
     super(props);
     this.state = {
       count: props.start || 0,
@@ -20,8 +23,7 @@ export class ClickCounterFromLesson extends Component<Prop, State> {
   }
 
   increment() {
-    const { count } = this.state;
-    this.setState({ count: count + 1 });
+    this.setState(state => ({ count: state.count + 1 }));
   }
 
   componentDidMount() {

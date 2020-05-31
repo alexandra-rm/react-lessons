@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.config.js",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "precommit": "npm test && npm run lint && npm run prettier && npm run test:loki",
-    "prettier": "prettier --write src/**/*.ts*",
+    "prettier": "prettier --write src/**/*.ts* .storybook/*.js",
     "start": "npx webpack-dev-server --mode development --open --hot",
     "test": "npx jest",
     "storybook": "start-storybook -p 6006",
@@ -51,6 +51,7 @@
     "@types/jest": "^25.2.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "babel-jest": "^25.2.6",
@@ -82,7 +83,6 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@types/enzyme-adapter-react-16": "^1.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

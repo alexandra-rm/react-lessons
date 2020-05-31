@@ -10,7 +10,7 @@ module.exports = {
     '@storybook/addon-knobs/register',
     '@storybook/addon-storysource',
   ],
-  webpackFinal: (config) => {
+  webpackFinal: config => {
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
 
     config.module.rules.push({
@@ -27,7 +27,7 @@ module.exports = {
     return {
       ...config,
       resolve: {
-        extensions: custom.resolve.extensions
+        extensions: custom.resolve.extensions,
       },
       module: {
         ...config.module,
@@ -36,4 +36,3 @@ module.exports = {
     };
   },
 };
-
