@@ -4,9 +4,15 @@ module.exports = {
         "es6": true
     },
     "extends": [
+        "prettier/@typescript-eslint",
         "eslint:recommended",
-        "plugin:react/recommended",
+        "plugin:react/recommended"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -25,6 +31,19 @@ module.exports = {
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["warn", "double"]
-    }
+        "quotes": ["error", "single"],
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "react/prop-types": 0
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.test.ts",
+                "**/*.test.tsx"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 };

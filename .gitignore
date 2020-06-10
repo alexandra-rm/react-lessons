@@ -6,3 +6,5 @@ npm-debug.log
 
 # The "distribution" code is the minimized and optimized output of our build process that will eventually be loaded in the browser.
 dist
+
+storybook-static
